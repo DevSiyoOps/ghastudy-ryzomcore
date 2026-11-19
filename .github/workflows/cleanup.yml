@@ -6,19 +6,20 @@ on:
 
 jobs:
   delete_versions:
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/delete-package-versions@v5
+      - uses: actions/delete-package-versions@e5bc658cc4c965c472efe991f8beea3981499c55 # v5.0.0
         with:
           min-versions-to-keep: 10
           package-name: ryzomcore-nelns
           package-type: container
-      - uses: actions/delete-package-versions@v5
+      - uses: actions/delete-package-versions@e5bc658cc4c965c472efe991f8beea3981499c55 # v5.0.0
         with:
           min-versions-to-keep: 10
           package-name: ryzomcore-snowballs
           package-type: container
-      - uses: actions/delete-package-versions@v5
+      - uses: actions/delete-package-versions@e5bc658cc4c965c472efe991f8beea3981499c55 # v5.0.0
         with:
           min-versions-to-keep: 10
           package-name: ryzomcore-tools
